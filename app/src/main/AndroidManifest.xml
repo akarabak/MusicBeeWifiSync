@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <!-- android:name=".WifiSyncApp" -->
 
     <application
@@ -21,6 +22,7 @@
 
         <service
             android:name=".WifiSyncService"
+            android:foregroundServiceType="dataSync"
             android:exported="false" />
 
         <activity android:name=".MainActivity" android:exported="true">
